@@ -15,6 +15,9 @@
 		D8C5401E249154E10060BD08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C5401C249154E10060BD08 /* LaunchScreen.storyboard */; };
 		D8C54029249154E10060BD08 /* Outdoorsy_Code_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C54028249154E10060BD08 /* Outdoorsy_Code_ChallengeTests.swift */; };
 		D8C54034249154E10060BD08 /* Outdoorsy_Code_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C54033249154E10060BD08 /* Outdoorsy_Code_ChallengeUITests.swift */; };
+		D8C5404224916E900060BD08 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5404124916E900060BD08 /* DownloadManager.swift */; };
+		D8C5404424916F310060BD08 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5404324916F310060BD08 /* ResultTableViewCell.swift */; };
+		D8C54048249195FA0060BD08 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C54047249195FA0060BD08 /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		D8C5402F249154E10060BD08 /* Outdoorsy Code ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Outdoorsy Code ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C54033249154E10060BD08 /* Outdoorsy_Code_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outdoorsy_Code_ChallengeUITests.swift; sourceTree = "<group>"; };
 		D8C54035249154E10060BD08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C5404124916E900060BD08 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		D8C5404324916F310060BD08 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		D8C54047249195FA0060BD08 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,9 @@
 			children = (
 				D8C54011249154DE0060BD08 /* AppDelegate.swift */,
 				D8C54013249154DE0060BD08 /* SceneDelegate.swift */,
-				D8C54015249154DE0060BD08 /* ViewController.swift */,
+				D8C54049249195FE0060BD08 /* Presenters */,
+				D8C5404524918DF70060BD08 /* Views */,
+				D8C5404624918E030060BD08 /* Data Management */,
 				D8C54017249154DE0060BD08 /* Main.storyboard */,
 				D8C5401A249154E10060BD08 /* Assets.xcassets */,
 				D8C5401C249154E10060BD08 /* LaunchScreen.storyboard */,
@@ -126,6 +134,31 @@
 				D8C54035249154E10060BD08 /* Info.plist */,
 			);
 			path = "Outdoorsy Code ChallengeUITests";
+			sourceTree = "<group>";
+		};
+		D8C5404524918DF70060BD08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8C54015249154DE0060BD08 /* ViewController.swift */,
+				D8C5404324916F310060BD08 /* ResultTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D8C5404624918E030060BD08 /* Data Management */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5404124916E900060BD08 /* DownloadManager.swift */,
+			);
+			path = "Data Management";
+			sourceTree = "<group>";
+		};
+		D8C54049249195FE0060BD08 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D8C54047249195FA0060BD08 /* Presenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C54048249195FA0060BD08 /* Presenter.swift in Sources */,
 				D8C54016249154DE0060BD08 /* ViewController.swift in Sources */,
 				D8C54012249154DE0060BD08 /* AppDelegate.swift in Sources */,
 				D8C54014249154DE0060BD08 /* SceneDelegate.swift in Sources */,
+				D8C5404424916F310060BD08 /* ResultTableViewCell.swift in Sources */,
+				D8C5404224916E900060BD08 /* DownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
