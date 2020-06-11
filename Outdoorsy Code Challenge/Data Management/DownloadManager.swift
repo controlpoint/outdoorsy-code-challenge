@@ -12,11 +12,17 @@ class DownloadManager: NSObject {
     
     static let shared = DownloadManager()
     
-    var dataTask: URLSessionDataTask?
+    private var dataTask: URLSessionDataTask?
+}
 
+// MARK: - Public methods
+extension DownloadManager {
+    
     func performSearch(_ search: String, completionBlock: @escaping (Error?, [ModelObject]?) -> ()) {
         
-        guard let url = urlFromSearchTerm(search: search) else {
+        // we're not implementing pagination right now since the count of results seems to be reasonable, but we would want to implement that for a shipping product
+        // FIXME: implement pagination and count limits
+        guard let url = urlFromSearchTerm(search: search, queryName: filterQueryParameter) else {
             
             let error = NSError.init(domain: "", code: 0, userInfo: nil)
             completionBlock(error, nil)
@@ -89,6 +95,7 @@ class DownloadManager: NSObject {
     }
 }
 
+// MARK: Data Processing
 extension DownloadManager {
     
     func objectFromDict(dict: [String : Any]) -> ModelObject? {
@@ -137,15 +144,15 @@ extension DownloadManager {
     }
 }
 
+// MARK: - Utilities
 extension DownloadManager {
     
-    func urlFromSearchTerm(search: String) -> URL? {
+    func urlFromSearchTerm(search: String, queryName: String) -> URL? {
         
         guard let escapedSearch = search.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return nil }
-        
         guard var urlComponnents = URLComponents(string: queryString) else { return nil }
 
-        urlComponnents.queryItems = [URLQueryItem(name: "filter[keywords]", value: escapedSearch)]
+        urlComponnents.queryItems = [URLQueryItem(name: queryName, value: escapedSearch)]
         
         return urlComponnents.url
     }

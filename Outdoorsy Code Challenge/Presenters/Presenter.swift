@@ -54,6 +54,10 @@ class Presenter: NSObject {
         }
         else {
             
+            // Right now we're keeping all images in memeory and re-downloading them with every key press
+            // We should cache the images either in memory or by saving to disk
+            // Since a quick caching solution would likely blow up the memory footprint, we'll skip this step for now
+            // FIXME: implement image caching
             DownloadManager.shared.downloadImage(from: object.imageURL) { (error, image) in
                 
                 // we'll treat the object name as a unique identifier to ensure that we aren't setting the image to the incorrect cell.

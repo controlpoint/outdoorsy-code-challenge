@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - UITextField Delegate
 extension ViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -42,6 +43,7 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - UITableView Delegate & DataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,6 +74,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - Presenter Protocol
 extension ViewController: PresenterProtocol {
     
     func didUpdateData() {
