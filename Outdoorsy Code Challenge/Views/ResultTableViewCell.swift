@@ -19,5 +19,4 @@ class ResultTableViewCell: UITableViewCell {
         
         resultImageView.layer.cornerRadius = 6
     }
-
 }

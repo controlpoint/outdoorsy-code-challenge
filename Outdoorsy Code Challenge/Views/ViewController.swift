@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: Presenter?
-    var resultsArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +29,14 @@ extension ViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
+        var updatedText = ""
+        if let text = textField.text,
+           let textRange = Range(range, in: text) {
+            
+           updatedText = text.replacingCharacters(in: textRange, with: string)
+        }
+
+        presenter?.textFieldDidUpdateText(text: updatedText)
         
         return true
     }
@@ -43,7 +50,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return presenter?.resultsArray.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,13 +60,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        
+        presenter?.configureCell(cell: cell, at: indexPath)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension ViewController: PresenterProtocol {
     
-    
+    func didUpdateData() {
+        
+        self.tableView.reloadData()
+    }
 }
