@@ -11,4 +11,6 @@ import UIKit
 let queryString = "https://search.outdoorsy.co/rentals"
 let filterQueryParameter = "filter[keywords]"
 
+let maxImageDimension: CGFloat = 100
+
 

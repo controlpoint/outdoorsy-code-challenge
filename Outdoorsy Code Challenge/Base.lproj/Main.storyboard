@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-672" y="325"/>
         </scene>
-        <!--View Controller-->
+        <!--Keyword Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Outdoorsy_Code_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Keyword Search" id="BYZ-38-t0r" customClass="ViewController" customModule="Outdoorsy_Code_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="80"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYh-vC-9sM">
-                                        <rect key="frame" x="16" y="16" width="382" height="48"/>
+                                        <rect key="frame" x="16" y="16" width="382" height="56"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="trailing" secondItem="FYh-vC-9sM" secondAttribute="trailing" constant="16" id="BdU-G0-Cfl"/>
                                     <constraint firstItem="FYh-vC-9sM" firstAttribute="top" secondItem="orz-KS-eNZ" secondAttribute="top" constant="16" id="FnS-Jb-uBA"/>
                                     <constraint firstAttribute="height" constant="80" id="pEt-9L-LSa"/>
-                                    <constraint firstAttribute="bottom" secondItem="FYh-vC-9sM" secondAttribute="bottom" constant="16" id="re3-5w-3cx"/>
+                                    <constraint firstAttribute="bottom" secondItem="FYh-vC-9sM" secondAttribute="bottom" constant="8" id="re3-5w-3cx"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dZS-BW-Otj">
@@ -64,10 +64,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-wY-mSK">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="80"/>
+                                                    <rect key="frame" x="16" y="8" width="382" height="64"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wgi-9q-9lD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wgi-9q-9lD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="64"/>
                                                             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="E7W-qO-xKI"/>
@@ -75,7 +75,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCa-GD-Zg8">
-                                                            <rect key="frame" x="116" y="0.0" width="266" height="80"/>
+                                                            <rect key="frame" x="116" y="0.0" width="266" height="64"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -84,9 +84,9 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hfk-wY-mSK" firstAttribute="top" secondItem="ud4-O5-Cvb" secondAttribute="top" id="6Ew-RH-kdE"/>
+                                                <constraint firstItem="hfk-wY-mSK" firstAttribute="top" secondItem="ud4-O5-Cvb" secondAttribute="top" constant="8" id="6Ew-RH-kdE"/>
                                                 <constraint firstAttribute="trailing" secondItem="hfk-wY-mSK" secondAttribute="trailing" constant="16" id="LZ3-ba-bjr"/>
-                                                <constraint firstAttribute="bottom" secondItem="hfk-wY-mSK" secondAttribute="bottom" id="P78-bn-Syg"/>
+                                                <constraint firstAttribute="bottom" secondItem="hfk-wY-mSK" secondAttribute="bottom" constant="8" id="P78-bn-Syg"/>
                                                 <constraint firstItem="hfk-wY-mSK" firstAttribute="leading" secondItem="ud4-O5-Cvb" secondAttribute="leading" constant="16" id="hHp-SW-5HA"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -114,7 +114,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SwC-gY-F4a"/>
+                    <navigationItem key="navigationItem" title="Keyword Search" id="SwC-gY-F4a"/>
                     <connections>
                         <outlet property="searchField" destination="FYh-vC-9sM" id="lHi-uB-GBo"/>
                         <outlet property="tableView" destination="dZS-BW-Otj" id="JTY-F0-idh"/>

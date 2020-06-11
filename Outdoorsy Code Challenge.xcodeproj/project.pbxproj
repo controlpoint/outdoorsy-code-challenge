@@ -21,6 +21,7 @@
 		D8C5404D2491AEE70060BD08 /* Collection+SafeAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5404C2491AEE70060BD08 /* Collection+SafeAccess.swift */; };
 		D8C540502491AFA60060BD08 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5404F2491AFA60060BD08 /* ModelObject.swift */; };
 		D8C540542491BE7A0060BD08 /* SharedDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C540532491BE7A0060BD08 /* SharedDefines.swift */; };
+		D8C540562491C4720060BD08 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C540552491C4720060BD08 /* UIImage+Resize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		D8C5404C2491AEE70060BD08 /* Collection+SafeAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+SafeAccess.swift"; sourceTree = "<group>"; };
 		D8C5404F2491AFA60060BD08 /* ModelObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
 		D8C540532491BE7A0060BD08 /* SharedDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDefines.swift; sourceTree = "<group>"; };
+		D8C540552491C4720060BD08 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D8C5404C2491AEE70060BD08 /* Collection+SafeAccess.swift */,
+				D8C540552491C4720060BD08 /* UIImage+Resize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				D8C5404D2491AEE70060BD08 /* Collection+SafeAccess.swift in Sources */,
 				D8C54048249195FA0060BD08 /* Presenter.swift in Sources */,
 				D8C54016249154DE0060BD08 /* ViewController.swift in Sources */,
+				D8C540562491C4720060BD08 /* UIImage+Resize.swift in Sources */,
 				D8C54012249154DE0060BD08 /* AppDelegate.swift in Sources */,
 				D8C540542491BE7A0060BD08 /* SharedDefines.swift in Sources */,
 				D8C540502491AFA60060BD08 /* ModelObject.swift in Sources */,

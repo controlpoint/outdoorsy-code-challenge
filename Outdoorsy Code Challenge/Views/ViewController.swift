@@ -48,6 +48,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return presenter?.resultsArray.count ?? 0

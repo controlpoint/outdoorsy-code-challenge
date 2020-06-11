@@ -57,6 +57,36 @@ class DownloadManager: NSObject {
         
         dataTask?.resume()
     }
+    
+    func downloadImage(from url: URL, completion: @escaping (Error?, UIImage?) -> ()) {
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            var result: UIImage?
+            var resultError: Error?
+            
+            if let error = error {
+                
+                resultError = error
+            }
+            
+            if let httpURLResponse = response as? HTTPURLResponse,
+                httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType,
+                mimeType.hasPrefix("image") {
+                
+                if let data = data, let image = UIImage(data: data) {
+                    
+                    result = image.ofSize(CGSize(width: maxImageDimension, height: maxImageDimension))
+                }
+            }
+            
+            DispatchQueue.main.async {
+            
+                completion(resultError, result)
+            }
+        }.resume()
+    }
 }
 
 extension DownloadManager {
@@ -69,7 +99,7 @@ extension DownloadManager {
         guard let primaryImageURLString = attributes["primary_image_url"] as? String else { return nil }
         guard let primaryImageURL = URL(string: primaryImageURLString) else { return nil }
 
-        return ModelObject(name: name, url: primaryImageURL)
+        return ModelObject(name: name, imageURL: primaryImageURL)
     }
     
     func processJSONData(jsonData: Data) throws -> [ModelObject] {

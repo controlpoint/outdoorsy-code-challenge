@@ -8,8 +8,15 @@
 
 import UIKit
 
-struct ModelObject {
+class ModelObject {
 
     let name: String
-    let url: URL
+    let imageURL: URL
+    var image: UIImage?
+    
+    init(name: String, imageURL: URL) {
+        
+        self.name = name
+        self.imageURL = imageURL
+    }
 }
